@@ -1,5 +1,6 @@
 # Shiny-Project
 
-## Membres : Martin Fornier
-          Ian Homawoo
+## Membres : 
+### Martin Fornier
+### Ian Homawoo
           
