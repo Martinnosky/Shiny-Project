@@ -50,3 +50,9 @@ chat.innerHTML += "<p><b>Robot :</b> " + response + "</p>";
 
 document.getElementById("userInput").value = "";
 }
+
+document.getElementById("userInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
