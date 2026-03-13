@@ -5,21 +5,33 @@
 ### Ian Homawoo
 ### Léon Zermeno
 
-# Robot conversation
-Création d'un robot conversationnel simple
+Petit site web contenant un robot conversationnel simple.
 
-## Technologies utilisées
+## Objectif
 
-HTML
-CSS
-JavaScript
+Ce projet consiste à créer une page web permettant de discuter avec un robot basique.  
+Le robot répond à certaines phrases simples pour simuler une conversation.
 
 ## Fonctionnement
 
-Le robot répond à certaines phrases grâce à des règles simples.
+L'utilisateur écrit un message dans le champ de texte puis clique sur **Envoyer**.  
+Le robot analyse le message et renvoie une réponse simple.
 
-Exemples :
+Exemples de messages :
+
 - bonjour
-- je m'appelle
-- JO
+- salut
+- je m'appelle ...
+- ça va
+- qui es tu
+- merci
 - au revoir
+
+## Technologies utilisées
+
+- HTML
+- CSS
+- JavaScript
+
+## Structure du projet
+
