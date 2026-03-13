@@ -1,30 +1,52 @@
+let userName = "";
+
 function sendMessage(){
 
-let input=document.getElementById("userInput").value.toLowerCase();
+let input = document.getElementById("userInput").value.toLowerCase();
+let chat = document.getElementById("chat");
 
-let chat=document.getElementById("chat");
+chat.innerHTML += "<p><b>Vous :</b> " + input + "</p>";
 
-chat.innerHTML += "<p>Utilisateur : "+input+"</p>";
+let response = "Je ne comprends pas très bien.";
 
-let response="Je ne comprends pas.";
-
-if(input.includes("bonjour")){
-response="Bonjour humain, comment t'appelles-tu ?";
+if(input.includes("bonjour") || input.includes("salut")){
+response = "Bonjour ! Comment t'appelles-tu ?";
 }
 
-if(input.includes("je m'appelle")){
-response="Bonjour, ravi de te rencontrer.";
+else if(input.includes("je m'appelle")){
+userName = input.split("je m'appelle ")[1];
+response = "Enchanté " + userName + " ! Comment ça va ?";
 }
 
-if(input.includes("jo")){
-response="Les prochains JO auront lieu à Paris en 2024.";
+else if(input.includes("ça va") || input.includes("ca va")){
+response = "Je vais très bien merci. Et toi ?";
 }
 
-if(input.includes("au revoir")){
-response="Au revoir humain.";
+else if(input.includes("bien")){
+response = "Super ! Je suis content de l'entendre.";
 }
 
-chat.innerHTML += "<p>Robot : "+response+"</p>";
+else if(input.includes("qui es tu") || input.includes("qui es-tu")){
+response = "Je suis un petit robot de conversation.";
+}
 
-document.getElementById("userInput").value="";
+else if(input.includes("que fais tu") || input.includes("que fais-tu")){
+response = "Je discute simplement avec toi.";
+}
+
+else if(input.includes("merci")){
+response = "Avec plaisir.";
+}
+
+else if(input.includes("au revoir") || input.includes("bye")){
+if(userName !== ""){
+response = "Au revoir " + userName + " !";
+}else{
+response = "Au revoir !";
+}
+}
+
+chat.innerHTML += "<p><b>Robot :</b> " + response + "</p>";
+
+document.getElementById("userInput").value = "";
 }
