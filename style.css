@@ -27,6 +27,11 @@ button{
 padding:10px;
 margin-top:10px;
 }
+button:hover{
+background-color:#ddd;
+cursor:pointer;
+}
+
 
 input{
 padding:10px;
