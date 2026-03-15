@@ -56,3 +56,9 @@ cursor:pointer;
 button:hover{
 background:#45a049;
 }
+
+footer{
+margin-top:30px;
+font-size:14px;
+color:#666;
+}
