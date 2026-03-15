@@ -24,7 +24,7 @@ response = "Enchanté " + userName + " ! Comment ça va ?";
 }
 
 else if(input.includes("ça va") || input.includes("ca va")){
-response = "Je vais très bien merci. Et toi ?";
+response = "Je vais très bien merci.";
 }
 
 else if(input.includes("bien")){
