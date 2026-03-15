@@ -1,9 +1,9 @@
-# Shiny-Project
+### Shiny-Project
 
 ## Membres : 
-### Martin Fornier
-### Ian Homawoo
-### Léon Zermeno
+# Martin Fornier
+# Ian Homawoo
+# Léon Zermeno
 
 Petit site web contenant un robot conversationnel simple.
 
@@ -17,13 +17,13 @@ Le robot répond à certaines phrases simples pour simuler une conversation.
 L'utilisateur écrit un message dans le champ de texte puis clique sur **Envoyer**.  
 Le robot analyse le message et renvoie une réponse simple.
 
-Exemples de messages :
+# Exemples de messages :
 
-- bonjour
-- salut
+- bonjour / salut / hello / coucou
 - je m'appelle ...
-- ça va
+- ça va / ca va / comment ça va
 - qui es tu
+- que fais tu ?
 - merci
 - au revoir
 
@@ -33,5 +33,6 @@ Exemples de messages :
 - CSS
 - JavaScript
 
-## Structure du projet
+## Lien pour visualiser la page Web
+https://martinnosky.github.io/Shiny-Project/
 
