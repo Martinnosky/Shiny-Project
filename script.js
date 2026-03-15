@@ -4,8 +4,8 @@ function sendMessage(){
 
 let input = document.getElementById("userInput").value.toLowerCase();
 let chat = document.getElementById("chat");
-
-chat.innerHTML += "<p><b>Vous :</b> " + input + "</p>";
+    
+chat.innerHTML += "<div class='user'><b>Vous :</b> " + input + "</div>";
 
 let response = "Je ne comprends pas très bien.";
 
@@ -45,8 +45,7 @@ response = "Au revoir " + userName + " !";
 response = "Au revoir !";
 }
 }
-
-chat.innerHTML += "<p><b>Robot :</b> " + response + "</p>";
+chat.innerHTML += "<div class='robot'><b>Robot :</b> " + response + "</div>";
 
 document.getElementById("userInput").value = "";
 }
