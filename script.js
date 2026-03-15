@@ -1,11 +1,16 @@
 let userName = "";
 
-function sendMessage(){
+function sendMessage() {
 
-let input = document.getElementById("userInput").value.toLowerCase();
+let inputField = document.getElementById("userInput");
+let input = inputField.value.trim().toLowerCase();
 let chat = document.getElementById("chat");
-    
+
+if(input === "") return;
+
 chat.innerHTML += "<div class='user'><b>Vous :</b> " + input + "</div>";
+
+inputField.value = "";
 
 let response = "Je ne comprends pas très bien.";
 
@@ -41,17 +46,34 @@ response = "Avec plaisir.";
 else if(input.includes("au revoir") || input.includes("bye")){
 if(userName !== ""){
 response = "Au revoir " + userName + " !";
-}else{
+} else {
 response = "Au revoir !";
 }
 }
+
+chat.innerHTML += "<div class='robot' id='typing'>Robot est en train d'écrire...</div>";
+
+chat.scrollTop = chat.scrollHeight;
+
+setTimeout(function(){
+
+let typing = document.getElementById("typing");
+if(typing){
+typing.remove();
+}
+
 chat.innerHTML += "<div class='robot'><b>Robot :</b> " + response + "</div>";
 
-document.getElementById("userInput").value = "";
+chat.scrollTop = chat.scrollHeight;
+
+}, 1000);
+
 }
 
 document.getElementById("userInput").addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        sendMessage();
-    }
+
+if(event.key === "Enter") {
+sendMessage();
+}
+
 });
