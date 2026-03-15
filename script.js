@@ -1,33 +1,47 @@
+// déclaration de la variable "userName" qui sera utilisée pour mémoriser le nom de l'utilisateur
 let userName = "";
 
+// déclaration de la variable "rules" contenant plusieurs listes qui déterminent le langage et possibles réponses du chatbot
 const rules = [
 {
+// liste de possibles manières pour que l'utilisateur dit "bonjour"
 patterns: ["bonjour","salut","hello","coucou"],
+// réponse du chatbot pour "bonjour"
 response: "Bonjour ! Comment t'appelles-tu ?"
 },
 
 {
+// liste de possibles manières pour que l'utilisateur dit "comment ça va?"
 patterns: ["comment ça va","ça va","ca va"],
+// réponse du chatbot pour "comment ça va?"
 response: "Je vais très bien merci. Et toi ?"
 },
 
 {
+// liste de possibles manières pour que l'utilisateur dit "qui es-tu?"
 patterns: ["qui es tu","qui es-tu"],
+// réponse du chatbot pour "qui es-tu?"
 response: "Je suis un petit robot de conversation."
 },
 
 {
+// liste de possibles manières pour que l'utilisateur dit "que fais-tu?"
 patterns: ["que fais tu","que fais-tu"],
+// réponse du chatbot pour "que fais-tu?"
 response: "Je discute simplement avec toi."
 },
 
 {
+// liste de possibles manières pour que l'utilisateur dit "merci"
 patterns: ["merci"],
+// réponse du chatbot pour "merci"
 response: "Avec plaisir."
 },
 
 {
+// liste de possibles manières pour que l'utilisateur dit "au revoir"
 patterns: ["au revoir","bye"],
+// réponse du chatbot pour "au revoir", avec une conditionnelle pour ajouter le nom de l'utilisateur si le chatbot le connait
 response: function(){
 if(userName !== ""){
 return "Au revoir " + userName + " !";
