@@ -51,10 +51,15 @@ return "Au revoir !";
 }
 ];
 
+// déclaration de fonction "SendMessage" qui permet à l'utilisateur d'introduire ces messages et les envoyer au chatbot
 function sendMessage(){
 
+// déclaration de variable "InputField" pour saisir le message entré par l'utilisateur
 let inputField = document.getElementById("userInput");
+// déclaration de variable "Input" qui transforme le message entré en minuscules pour facilité d'utilisation
 let input = inputField.value.trim().toLowerCase();
+
+// déclaration de variable "Chat" pour afficher un historique de la conversation avec le chatbot
 let chat = document.getElementById("chat");
 
 if(input === "") return;
