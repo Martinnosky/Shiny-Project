@@ -51,35 +51,45 @@ return "Au revoir !";
 }
 ];
 
-// déclaration de fonction "SendMessage" qui permet à l'utilisateur d'introduire ces messages et les envoyer au chatbot
+// déclaration de fonction "sendMessage" qui permet à l'utilisateur d'introduire ces messages et les envoyer au chatbot
 function sendMessage(){
 
-// déclaration de variable "InputField" pour saisir le message entré par l'utilisateur
+// déclaration de variable "inputField" pour saisir le message entré par l'utilisateur
 let inputField = document.getElementById("userInput");
 // déclaration de variable "Input" qui transforme le message entré en minuscules pour facilité d'utilisation
 let input = inputField.value.trim().toLowerCase();
 
-// déclaration de variable "Chat" pour afficher un historique de la conversation avec le chatbot
+// déclaration de variable "chat" pour afficher un historique de la conversation avec le chatbot
 let chat = document.getElementById("chat");
 
+// ne pas utiliser la variable "chat" si la case d'entrée de l'utilisateur est vide
 if(input === "") return;
 
+// structure d'affichage des messages entrés par l'utilisateur, comme une messagerie
 chat.innerHTML += "<div class='user'><b>Vous :</b> " + input + "</div>";
 
+// effacer le message entré par l'utilisateur après que ce dernier l'envoie
 inputField.value = "";
 
+// déclaration de variable "response" que le chatbot affichera lorsqu'il peut pas répondre à une question, mais qui sera affectée par une réponse valide dès que le chatbot la reconnaît
 let response = "Je ne comprends pas très bien.";
 
+// vérification du message entré par l'utilisateur, cherchant une introduction
 if(input.includes("je m'appelle")){
 userName = input.split("je m'appelle ")[1];
+// affectation de la variable "Response" pour que le chatbot dit bonjour à l'utilisateur
 response = "Enchanté " + userName + " !";
 }
+// au cas où l'utilisateur entre quelque chose d'autre que "je m'appelle...", on éxécute la commande suivante
 else{
 
+// boucle for et déclaration de variable "rule", qui comprend une règle individuelle dans la liste de listes "rules"
 for(let rule of rules){
 
+// boucle for et déclaration de variable "pattern", qui comprend un "motif" individuel dans la liste de listes "rules"
 for(let pattern of rule.patterns){
 
+// condition qui cherche trouver un match entre les motifs et le message entré par l'utilisateur
 if(input.includes(pattern)){
 
 if(typeof rule.response === "function"){
