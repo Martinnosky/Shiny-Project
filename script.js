@@ -9,14 +9,24 @@ patterns: ["bonjour","salut","hello","coucou"],
 // réponse du chatbot pour "bonjour"
 response: "Bonjour ! Comment t'appelles-tu ?"
 },
-
+{
+ patterns:["bonne nuit"],
+  response :"Bonne nuit ! Repose toi bien"
+},
+{
+patterns: ["comment tu t'appelles","ton nom","tu t'appelles comment"],
+response: "Je suis un petit robot de conversation."
+},
 {
 // liste de possibles manières pour que l'utilisateur dit "comment ça va?"
 patterns: ["comment ça va","ça va","ca va"],
 // réponse du chatbot pour "comment ça va?"
 response: "Je vais très bien merci. Et toi ?"
 },
-
+{
+patterns: ["ça va bien","je vais bien","tout va bien"],
+response: "Je suis content de l'entendre !"
+},
 {
 // liste de possibles manières pour que l'utilisateur dit "qui es-tu?"
 patterns: ["qui es tu","qui es-tu"],
