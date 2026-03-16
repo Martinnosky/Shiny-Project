@@ -76,4 +76,8 @@ to{
 opacity:1;
 transform:translateY(0);
 }
+.user{
+margin-left:auto;
+text-align:right;
 }
+
