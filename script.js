@@ -102,6 +102,7 @@ for(let pattern of rule.patterns){
 // condition qui cherche trouver un match entre les motifs et le message entré par l'utilisateur
 if(input.includes(pattern)){
 
+// 
 if(typeof rule.response === "function"){
 response = rule.response();
 }
@@ -118,25 +119,34 @@ break;
 
 }
 
+ // affichage d'un texte qui dit "typing", pour simuler une courte période dans laquelle le chatbot "écrit sa réponse", cependant le chatbot processe le message et cherche une réponse appropriée
 chat.innerHTML += "<div class='robot' id='typing'>Robot est en train d'écrire...</div>";
 
+// renvoie le centre de l'écran vers le message le plus récent, lorsque l'utilisateur entre un message
 chat.scrollTop = chat.scrollHeight;
 
+// éxécution de la fonction "function" après délai
 setTimeout(function(){
 
+// déclaration de variable "typing", qui revise le message d'attente du chatbot, et le vide avant d'afficher la réponse
 let typing = document.getElementById("typing");
 if(typing) typing.remove();
 
+// affichage de la réponse du chatbot
 chat.innerHTML += "<div class='robot'><b>Robot :</b> " + response + "</div>";
 
+// renvoie le centre de l'écran vers le message le plus récent, lorsque le chatbot entre un message
 chat.scrollTop = chat.scrollHeight;
 
+// détermination du temps de délai pour "setTimeout" à 1000 millisecondes, soit une seconde
 },1000);
 
 }
 
+// création de "EventListener" qui relie le code à l'utilisateur grace a une touche
 document.getElementById("userInput").addEventListener("keypress",function(event){
 
+// association de la touche qui déclenche la fonction à "Enter" du clavier
 if(event.key === "Enter"){
 sendMessage();
 }
