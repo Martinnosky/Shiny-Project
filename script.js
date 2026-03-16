@@ -10,6 +10,10 @@ patterns: ["bonjour","salut","hello","coucou"],
 response: "Bonjour ! Comment t'appelles-tu ?"
 },
 {
+ patterns:["bonne nuit"],
+  response :"Bonne nuit ! Repose toi bien"
+},
+{
 patterns: ["comment tu t'appelles","ton nom","tu t'appelles comment"],
 response: "Je suis un petit robot de conversation."
 },
