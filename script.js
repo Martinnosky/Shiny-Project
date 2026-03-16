@@ -19,7 +19,10 @@ patterns: ["comment ça va","ça va","ca va"],
 // réponse du chatbot pour "comment ça va?"
 response: "Je vais très bien merci. Et toi ?"
 },
-
+{
+patterns: ["ça va bien","je vais bien","tout va bien"],
+response: "Je suis content de l'entendre !"
+},
 {
 // liste de possibles manières pour que l'utilisateur dit "qui es-tu?"
 patterns: ["qui es tu","qui es-tu"],
